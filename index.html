@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="import" href="dist/exercise-list.html">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+
+		
+		<exercise-list></exercise-list>
+
+		<script>
+			let list = $ ( 'exercise-list' ).first ( ); 
+
+			let exercises =
+			[
+				{ name: 'Tricep extension' },
+				{ name: 'Bicep curl' },
+				{ name: 'Push up' }
+			]
+
+			list.prop( 'exercises', exercises );
+
+			list.on ( 'describe-exercise', function ( event )
+			{
+				// Action to start describing an exercise here...
+				// for example showing a form.
+				alert ( 'Responding to tap inside consumer.' );
+			} );
+		</script>
+	</body>
+</html>

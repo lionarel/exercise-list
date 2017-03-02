@@ -1,0 +1,14 @@
+
+<link rel="import" href="./imports.html"/>
+<link rel="import" href="./exercise-list-styles.html"/>
+<dom-module id="exercise-list">
+  <style is="custom-style" include="exercise-list-styles"></style>
+  <template>
+    <paper-datatable data="{{ exercises }}" selectable="selectable">
+      <paper-datatable-column header="Exercise name" property="name" type="String"></paper-datatable-column>
+    </paper-datatable>
+    <paper-fab icon="add" on-tap="add"></paper-fab>
+  </template>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./exercise-list.js"></script>
+</dom-module>
